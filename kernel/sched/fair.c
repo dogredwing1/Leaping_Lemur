@@ -31,14 +31,14 @@
 
 #include "sched.h"
 
-unsigned int sysctl_sched_latency = 6000000ULL;
-unsigned int normalized_sysctl_sched_latency = 6000000ULL;
+unsigned int sysctl_sched_latency = 20000000ULL;
+unsigned int normalized_sysctl_sched_latency = 20000000ULL;
 
 enum sched_tunable_scaling sysctl_sched_tunable_scaling
 	= SCHED_TUNABLESCALING_LOG;
 
-unsigned int sysctl_sched_min_granularity = 750000ULL;
-unsigned int normalized_sysctl_sched_min_granularity = 750000ULL;
+unsigned int sysctl_sched_min_granularity = 4000000ULL;
+unsigned int normalized_sysctl_sched_min_granularity = 4000000ULL;
 
 static unsigned int sched_nr_latency = 8;
 
@@ -46,8 +46,8 @@ unsigned int sysctl_sched_child_runs_first __read_mostly;
 
 unsigned int __read_mostly sysctl_sched_wake_to_idle;
 
-unsigned int sysctl_sched_wakeup_granularity = 1000000UL;
-unsigned int normalized_sysctl_sched_wakeup_granularity = 1000000UL;
+unsigned int sysctl_sched_wakeup_granularity = 50000000UL;
+unsigned int normalized_sysctl_sched_wakeup_granularity = 50000000UL;
 
 const_debug unsigned int sysctl_sched_migration_cost = 500000UL;
 
